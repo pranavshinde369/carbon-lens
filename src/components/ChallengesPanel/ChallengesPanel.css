@@ -1,0 +1,56 @@
+/* ─── Challenges ─────────────────────────────────────────────── */
+
+.challenges-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 480px) {
+  .challenges-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.challenge-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.challenge-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.challenge-card.joined {
+  border-color: rgba(22, 163, 74, 0.3);
+  background: var(--clr-green-bg);
+}
+
+.ch-icon { font-size: 28px; }
+
+.ch-title {
+  font-family: var(--ff-head);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--clr-text);
+}
+
+.ch-desc { font-size: 13px; color: var(--clr-text-2); }
+
+.ch-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--clr-text-2);
+  font-weight: 500;
+}
+
+.ch-participants {
+  font-size: 11px;
+  color: var(--clr-text-3);
+}

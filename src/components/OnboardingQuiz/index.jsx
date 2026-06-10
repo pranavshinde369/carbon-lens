@@ -1,19 +1,21 @@
 /**
- * OnboardingQuiz — Quick footprint assessment dialog
+ * @component OnboardingQuiz
+ * @description A modal quiz that walks users through 6 questions to estimate
+ *              their annual carbon footprint. Includes focus trap, Escape key
+ *              handling, and full ARIA dialog pattern.
  *
- * A modal quiz that walks users through 6 questions to estimate
- * their annual carbon footprint. Includes focus trap, Escape key
- * handling, and full ARIA dialog pattern.
- *
- * @component
  * @param {Object} props
  * @param {Function} props.onComplete - Callback receiving quiz answers object
- * @returns {React.ReactElement}
+ * @returns {JSX.Element}
+ *
+ * @example
+ * <OnboardingQuiz onComplete={answers => dispatch({type: 'COMPLETE_QUIZ', answers})} />
  */
 
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { sanitiseNumber } from "../../utils/sanitise";
+import "./OnboardingQuiz.css";
 
 /** @constant Quiz step definitions */
 const QUIZ_STEPS = [
@@ -146,7 +148,9 @@ function OnboardingQuiz({ onComplete }) {
 
         {current.type === "number" && (
           <div className="quiz-number">
+            <label htmlFor="quiz-num-input" className="sr-only">{current.q}</label>
             <input
+              id="quiz-num-input"
               type="number"
               min={current.min}
               max={current.max}
@@ -157,8 +161,8 @@ function OnboardingQuiz({ onComplete }) {
               onKeyDown={(e) => {
                 if (e.key === "Enter" && e.target.value) handleAnswer(e.target.value);
               }}
-              id="quiz-num-input"
               aria-label={current.q}
+              aria-required="true"
             />
             <button
               className="btn btn-primary"

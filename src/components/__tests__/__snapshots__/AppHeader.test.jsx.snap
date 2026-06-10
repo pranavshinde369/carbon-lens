@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="app-header"
+    role="banner"
+  >
+    <div
+      class="header-inner"
+    >
+      <div
+        class="brand"
+      >
+        <span
+          aria-hidden="true"
+          class="brand-icon"
+        >
+          🌿
+        </span>
+        <span
+          class="brand-name"
+        >
+          CarbonLens
+        </span>
+        <span
+          class="brand-tag"
+        >
+          India
+        </span>
+      </div>
+      <div
+        aria-live="polite"
+        class="header-meta"
+      >
+        <span
+          class="footprint-chip"
+        >
+          2.50 t CO₂e
+          <span
+            class="chip-sub"
+          >
+            /year
+          </span>
+        </span>
+        <button
+          aria-label="Retake footprint quiz"
+          class="btn btn-ghost"
+        >
+          Retake Quiz
+        </button>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;

@@ -1,0 +1,405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TipsPanel matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="tips-heading"
+    class="tips-panel"
+  >
+    <div
+      class="section-header"
+    >
+      <h2
+        id="tips-heading"
+      >
+        Personalised Tips
+      </h2>
+      <div
+        aria-label="Filter tips by category"
+        class="filter-pills"
+        role="group"
+      >
+        <button
+          aria-pressed="true"
+          class="pill active"
+        >
+          All
+        </button>
+        <button
+          aria-pressed="false"
+          class="pill "
+        >
+          Transport
+        </button>
+        <button
+          aria-pressed="false"
+          class="pill "
+        >
+          Home Energy
+        </button>
+        <button
+          aria-pressed="false"
+          class="pill "
+        >
+          Food & Diet
+        </button>
+        <button
+          aria-pressed="false"
+          class="pill "
+        >
+          Shopping
+        </button>
+      </div>
+    </div>
+    <ul
+      aria-label="Eco tips"
+      class="tips-list"
+    >
+      <li
+        class="tip-card "
+      >
+        <div
+          class="tip-header"
+        >
+          <span
+            class="tip-tag"
+          >
+            High Impact
+          </span>
+          <span
+            class="tip-impact"
+          >
+            Saves ~680 kg CO₂e/yr
+          </span>
+        </div>
+        <h3
+          class="tip-title"
+        >
+          Switch to Metro for daily commute
+        </h3>
+        <p
+          class="tip-desc"
+        >
+          Metro emits 94% less CO₂ than a petrol car per km. A 10 km daily commute saves ~680 kg/year.
+        </p>
+        <div
+          class="tip-footer"
+        >
+          <span
+            class="difficulty diff-easy"
+          >
+            easy
+          </span>
+          <button
+            aria-label="Mark \\"Switch to Metro for daily commute\\" as started"
+            class="btn btn-outline"
+          >
+            I'll try this
+          </button>
+        </div>
+      </li>
+      <li
+        class="tip-card "
+      >
+        <div
+          class="tip-header"
+        >
+          <span
+            class="tip-tag"
+          >
+            Lifestyle
+          </span>
+          <span
+            class="tip-impact"
+          >
+            Saves ~320 kg CO₂e/yr
+          </span>
+        </div>
+        <h3
+          class="tip-title"
+        >
+          Work from home 2 days/week
+        </h3>
+        <p
+          class="tip-desc"
+        >
+          Eliminating commutes twice weekly can save significant fuel and CO₂ annually.
+        </p>
+        <div
+          class="tip-footer"
+        >
+          <span
+            class="difficulty diff-medium"
+          >
+            medium
+          </span>
+          <button
+            aria-label="Mark \\"Work from home 2 days/week\\" as started"
+            class="btn btn-outline"
+          >
+            I'll try this
+          </button>
+        </div>
+      </li>
+      <li
+        class="tip-card "
+      >
+        <div
+          class="tip-header"
+        >
+          <span
+            class="tip-tag"
+          >
+            Investment
+          </span>
+          <span
+            class="tip-impact"
+          >
+            Saves ~1800 kg CO₂e/yr
+          </span>
+        </div>
+        <h3
+          class="tip-title"
+        >
+          Install a 2kW solar rooftop
+        </h3>
+        <p
+          class="tip-desc"
+        >
+          India's solar irradiance averages 5-6 kWh/m²/day. A 2kW system offsets ~1800 kg CO₂/year.
+        </p>
+        <div
+          class="tip-footer"
+        >
+          <span
+            class="difficulty diff-hard"
+          >
+            hard
+          </span>
+          <button
+            aria-label="Mark \\"Install a 2kW solar rooftop\\" as started"
+            class="btn btn-outline"
+          >
+            I'll try this
+          </button>
+        </div>
+      </li>
+      <li
+        class="tip-card "
+      >
+        <div
+          class="tip-header"
+        >
+          <span
+            class="tip-tag"
+          >
+            Quick Win
+          </span>
+          <span
+            class="tip-impact"
+          >
+            Saves ~120 kg CO₂e/yr
+          </span>
+        </div>
+        <h3
+          class="tip-title"
+        >
+          Switch to LED bulbs everywhere
+        </h3>
+        <p
+          class="tip-desc"
+        >
+          LEDs use 75% less energy than incandescent. Full home swap saves ~120 kg/year.
+        </p>
+        <div
+          class="tip-footer"
+        >
+          <span
+            class="difficulty diff-easy"
+          >
+            easy
+          </span>
+          <button
+            aria-label="Mark \\"Switch to LED bulbs everywhere\\" as started"
+            class="btn btn-outline"
+          >
+            I'll try this
+          </button>
+        </div>
+      </li>
+      <li
+        class="tip-card "
+      >
+        <div
+          class="tip-header"
+        >
+          <span
+            class="tip-tag"
+          >
+            High Impact
+          </span>
+          <span
+            class="tip-impact"
+          >
+            Saves ~800 kg CO₂e/yr
+          </span>
+        </div>
+        <h3
+          class="tip-title"
+        >
+          Go vegetarian on weekdays
+        </h3>
+        <p
+          class="tip-desc"
+        >
+          Plant-based diets emit 50-70% less than meat-heavy diets. 5 veg days/week saves ~800 kg/year.
+        </p>
+        <div
+          class="tip-footer"
+        >
+          <span
+            class="difficulty diff-medium"
+          >
+            medium
+          </span>
+          <button
+            aria-label="Mark \\"Go vegetarian on weekdays\\" as started"
+            class="btn btn-outline"
+          >
+            I'll try this
+          </button>
+        </div>
+      </li>
+      <li
+        class="tip-card "
+      >
+        <div
+          class="tip-header"
+        >
+          <span
+            class="tip-tag"
+          >
+            Quick Win
+          </span>
+          <span
+            class="tip-impact"
+          >
+            Saves ~230 kg CO₂e/yr
+          </span>
+        </div>
+        <h3
+          class="tip-title"
+        >
+          Cut food waste by meal planning
+        </h3>
+        <p
+          class="tip-desc"
+        >
+          ~40% of food in India is wasted. Planning meals reduces landfill methane emissions.
+        </p>
+        <div
+          class="tip-footer"
+        >
+          <span
+            class="difficulty diff-easy"
+          >
+            easy
+          </span>
+          <button
+            aria-label="Mark \\"Cut food waste by meal planning\\" as started"
+            class="btn btn-outline"
+          >
+            I'll try this
+          </button>
+        </div>
+      </li>
+      <li
+        class="tip-card "
+      >
+        <div
+          class="tip-header"
+        >
+          <span
+            class="tip-tag"
+          >
+            Savings
+          </span>
+          <span
+            class="tip-impact"
+          >
+            Saves ~300 kg CO₂e/yr
+          </span>
+        </div>
+        <h3
+          class="tip-title"
+        >
+          Buy second-hand electronics
+        </h3>
+        <p
+          class="tip-desc"
+        >
+          Manufacturing a smartphone emits ~70 kg CO₂. Refurbished devices cut that by 80%.
+        </p>
+        <div
+          class="tip-footer"
+        >
+          <span
+            class="difficulty diff-easy"
+          >
+            easy
+          </span>
+          <button
+            aria-label="Mark \\"Buy second-hand electronics\\" as started"
+            class="btn btn-outline"
+          >
+            I'll try this
+          </button>
+        </div>
+      </li>
+      <li
+        class="tip-card "
+      >
+        <div
+          class="tip-header"
+        >
+          <span
+            class="tip-tag"
+          >
+            Digital
+          </span>
+          <span
+            class="tip-impact"
+          >
+            Saves ~45 kg CO₂e/yr
+          </span>
+        </div>
+        <h3
+          class="tip-title"
+        >
+          Reduce streaming resolution
+        </h3>
+        <p
+          class="tip-desc"
+        >
+          4K streaming uses 3x energy of 1080p. Lowering resolution 2 hrs/day saves ~45 kg/year.
+        </p>
+        <div
+          class="tip-footer"
+        >
+          <span
+            class="difficulty diff-easy"
+          >
+            easy
+          </span>
+          <button
+            aria-label="Mark \\"Reduce streaming resolution\\" as started"
+            class="btn btn-outline"
+          >
+            I'll try this
+          </button>
+        </div>
+      </li>
+    </ul>
+  </section>
+</DocumentFragment>
+`;

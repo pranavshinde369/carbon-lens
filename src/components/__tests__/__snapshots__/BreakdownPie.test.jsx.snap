@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreakdownPie matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="Pie chart: Transport 100%"
+    class="pie-container"
+    role="img"
+  >
+    <div
+      class="recharts-responsive-container"
+      style="width: 100%; height: 220px; min-width: 0;"
+    />
+    <div
+      class="pie-legend"
+      role="list"
+    >
+      <div
+        class="legend-row"
+        role="listitem"
+      >
+        <span
+          aria-hidden="true"
+          class="legend-dot"
+          style="background: rgb(37, 99, 235);"
+        />
+        <span
+          class="legend-name"
+        >
+          🚗 Transport
+        </span>
+        <span
+          class="legend-val"
+        >
+          100%
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

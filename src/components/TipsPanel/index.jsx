@@ -1,12 +1,17 @@
 /**
- * TipsPanel — Personalised eco tips with category filters
+ * @component TipsPanel
+ * @description Displays a filtered list of actionable eco-tips,
+ *              prioritised by the user's highest emission categories.
+ *              Allows users to mark tips as committed.
  *
- * @component
  * @param {Object} props
- * @param {Object} props.breakdown - Emission breakdown from aggregateEmissions()
- * @param {Array<string>} props.completedTips - IDs of completed tips
- * @param {Function} props.onCompleteTip - Callback receiving tip id
- * @returns {React.ReactElement}
+ * @param {Object} props.breakdown - Emission breakdown from aggregateEmissions
+ * @param {Array<string>} props.completedTips - Array of committed tip IDs
+ * @param {Function} props.onCompleteTip - Callback when a tip is committed
+ * @returns {JSX.Element}
+ *
+ * @example
+ * <TipsPanel breakdown={breakdown} completedTips={['t1']} onCompleteTip={id => dispatch({type: 'COMMIT', id})} />
  */
 
 import React, { useState, useMemo } from "react";
@@ -14,6 +19,7 @@ import PropTypes from "prop-types";
 import { CATEGORIES } from "../../data/constants";
 import { getPersonalisedTips } from "../../utils/carbonCalc";
 import { ECO_TIPS } from "../../data/constants";
+import "./TipsPanel.css";
 
 function TipsPanel({ breakdown, completedTips, onCompleteTip }) {
   const [filter, setFilter] = useState("all");
@@ -70,7 +76,7 @@ function TipsPanel({ breakdown, completedTips, onCompleteTip }) {
 
 TipsPanel.displayName = "TipsPanel";
 TipsPanel.propTypes = {
-  breakdown: PropTypes.shape({ byCategory: PropTypes.object }).isRequired,
+  breakdown: PropTypes.object.isRequired,
   completedTips: PropTypes.arrayOf(PropTypes.string).isRequired,
   onCompleteTip: PropTypes.func.isRequired,
 };

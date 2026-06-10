@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrendChart matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="Area chart showing monthly carbon footprint. 
+          Transport averages 10 kg/month, 
+          Energy 10 kg/month,
+          Food 10 kg/month,
+          Shopping 10 kg/month."
+    class="chart-wrapper"
+    role="img"
+  >
+    <div
+      class="recharts-responsive-container"
+      style="width: 100%; height: 260px; min-width: 0;"
+    />
+  </div>
+  <div
+    aria-label="Monthly trend data table"
+    class="sr-only"
+  >
+    <table>
+      <caption>
+        Monthly carbon emissions by category (kg CO₂e)
+      </caption>
+      <thead>
+        <tr>
+          <th>
+            Month
+          </th>
+          <th>
+            Transport
+          </th>
+          <th>
+            Energy
+          </th>
+          <th>
+            Food
+          </th>
+          <th>
+            Shopping
+          </th>
+          <th>
+            Total
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Jan
+          </td>
+          <td>
+            10
+          </td>
+          <td>
+            10
+          </td>
+          <td>
+            10
+          </td>
+          <td>
+            10
+          </td>
+          <td>
+            40
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,68 @@
+/* ─── Activity Form ──────────────────────────────────────────── */
+
+.activity-form { display: flex; flex-direction: column; gap: 12px; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: end;
+}
+
+@media (min-width: 560px) {
+  .form-row { grid-template-columns: 1.5fr 1.5fr 1fr auto; }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--clr-text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-field select,
+.form-field input[type="number"] {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--clr-border-md);
+  border-radius: var(--radius-md);
+  font-family: var(--ff-body);
+  font-size: 14px;
+  color: var(--clr-text);
+  background: var(--clr-surface);
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+
+.form-field select:focus,
+.form-field input:focus {
+  border-color: var(--clr-green);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+  outline: none;
+}
+
+.emission-preview {
+  font-size: 14px;
+  color: var(--clr-text-2);
+  background: var(--clr-green-bg);
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--clr-green);
+}
+
+.emission-preview strong { color: var(--clr-green-dark); }
+
+.form-error {
+  font-size: 13px;
+  color: var(--clr-danger);
+  background: var(--clr-danger-bg);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+}

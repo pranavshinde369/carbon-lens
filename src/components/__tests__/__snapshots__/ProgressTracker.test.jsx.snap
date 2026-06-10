@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressTracker matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="progress-heading"
+    class="section-block progress-tracker"
+  >
+    <h2
+      id="progress-heading"
+    >
+      My Reduction Journey
+    </h2>
+    <div
+      class="progress-stats"
+    >
+      <div
+        class="p-stat"
+      >
+        <span
+          class="p-val"
+        >
+          1,068
+        </span>
+        <span
+          class="p-label"
+        >
+          kg CO₂e/yr potential savings
+        </span>
+      </div>
+      <div
+        class="p-stat"
+      >
+        <span
+          class="p-val"
+        >
+          ✓ On Track
+        </span>
+        <span
+          class="p-label"
+        >
+          projected footprint
+        </span>
+      </div>
+      <div
+        class="p-stat"
+      >
+        <span
+          class="p-val"
+        >
+          3
+        </span>
+        <span
+          class="p-label"
+        >
+          actions committed
+        </span>
+      </div>
+    </div>
+    <div
+      aria-label="100% progress toward Paris climate target"
+      class="progress-bar-wrap"
+    >
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="100"
+        class="progress-track"
+        role="progressbar"
+      >
+        <div
+          class="progress-fill"
+          style="width: 100%;"
+        />
+      </div>
+      <div
+        class="progress-labels"
+      >
+        <span>
+          Current: 2.5t
+        </span>
+        <span>
+          Paris target: 2t
+        </span>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

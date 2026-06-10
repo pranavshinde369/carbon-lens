@@ -1,21 +1,21 @@
 /**
- * SummaryCards — Dashboard summary statistics
+ * @component SummaryCards
+ * @description Displays top-level key performance indicators (KPIs)
+ *              such as total footprint, daily average, equivalency,
+ *              and top emission category.
  *
- * Displays four key metric cards: annual footprint, daily average,
- * India comparison, and Paris target gap.
- *
- * @component
  * @param {Object} props
- * @param {number} props.annualKg - Annual carbon footprint in kg CO₂e
- * @param {Object} props.breakdown - Aggregated emission breakdown
- * @returns {React.ReactElement}
+ * @param {number} props.annualKg  - Estimated annual footprint in kg
+ * @param {Object} props.breakdown - Breakdown of current logged emissions
+ * @returns {JSX.Element}
  *
  * @example
- *   <SummaryCards annualKg={2800} breakdown={breakdown} />
+ * <SummaryCards annualKg={2800} breakdown={{ total: 50, byCategory: { transport: 50 } }} />
  */
 
 import React from "react";
 import PropTypes from "prop-types";
+import "./SummaryCards.css";
 import { BENCHMARKS } from "../../data/constants";
 import { compareToBenchmarks } from "../../utils/carbonCalc";
 import { formatCO2, annualToDaily, toEquivalency } from "../../utils/formatters";
@@ -72,12 +72,10 @@ function SummaryCards({ annualKg, breakdown }) {
 SummaryCards.displayName = "SummaryCards";
 
 SummaryCards.propTypes = {
-  /** Annual carbon footprint in kg CO₂e */
-  annualKg: PropTypes.number.isRequired,
-  /** Aggregated emission breakdown object from aggregateEmissions() */
+  annualKg:  PropTypes.number.isRequired,
   breakdown: PropTypes.shape({
-    total: PropTypes.number,
-    byCategory: PropTypes.object,
+    total:      PropTypes.number,
+    byCategory: PropTypes.objectOf(PropTypes.number),
   }).isRequired,
 };
 

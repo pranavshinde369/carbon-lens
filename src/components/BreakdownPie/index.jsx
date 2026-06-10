@@ -1,24 +1,23 @@
 /**
- * BreakdownPie — Category breakdown donut chart
+ * @component BreakdownPie
+ * @description Renders a donut/pie chart showing the percentage breakdown
+ *              of carbon emissions by category. Includes descriptive aria-label
+ *              with percentage data for screen readers.
  *
- * Renders a donut/pie chart showing the percentage breakdown
- * of carbon emissions by category. Includes descriptive aria-label
- * with percentage data for screen readers.
- *
- * @component
  * @param {Object} props
  * @param {Object} props.byCategory - { transport, energy, food, shopping } emission totals
  * @param {boolean} props.reducedMotion - Whether to disable chart animations
- * @returns {React.ReactElement}
+ * @returns {JSX.Element}
  *
  * @example
- *   <BreakdownPie byCategory={{ transport: 29, energy: 26, food: 31, shopping: 14 }} />
+ * <BreakdownPie byCategory={{ transport: 29, energy: 26, food: 31, shopping: 14 }} />
  */
 
 import React, { useMemo } from "react";
 import PropTypes from "prop-types";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { CATEGORIES } from "../../data/constants";
+import "./BreakdownPie.css";
 
 /** @constant Chart colour mapping by category ID */
 const CHART_COLORS = {

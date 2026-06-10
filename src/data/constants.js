@@ -7,6 +7,18 @@
 export const INDIA_GRID_INTENSITY = 0.716; // kg CO₂e/kWh (CEA 2022)
 export const GLOBAL_AVG_FOOTPRINT = 4900; // kg CO₂e/year per capita
 
+export const MONTHS_PER_YEAR               = 12;
+export const WORKING_DAYS_PER_YEAR         = 260;
+export const MIN_LOG_ENTRIES_FOR_ESTIMATE  = 3;
+export const STORAGE_SIZE_LIMIT_BYTES      = 51200; // 50 KB
+export const QUIZ_STEP_COUNT               = 6;
+export const BENCHMARK_SCALE_MAX_KG        = 16000;
+export const DAILY_MINUTES_IN_YEAR         = 365;
+export const DEFAULT_COMMUTE_MONTHLY_KWH   = 100;
+export const DEFAULT_LPG_CYLINDERS         = 1;
+export const BASE_FOOD_MONTHLY_KG_CO2E     = 180;
+export const BASE_SHOPPING_MONTHLY_KG_CO2E = 140;
+
 // ─── Emission Factors ─────────────────────────────────────────────────────────
 
 export const EMISSION_FACTORS = {
@@ -57,6 +69,13 @@ export const EMISSION_FACTORS = {
 };
 
 // ─── Categories Metadata ─────────────────────────────────────────────────────
+
+export const TABS = [
+  { id: "dashboard", label: "Dashboard", icon: "📊" },
+  { id: "log", label: "Log Activity", icon: "✏️" },
+  { id: "tips", label: "Tips", icon: "💡" },
+  { id: "challenges", label: "Challenges", icon: "🏆" },
+];
 
 export const CATEGORIES = [
   {

@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BenchmarkBar matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="Carbon footprint benchmark comparison"
+    class="benchmark-bar-wrap"
+  >
+    <div
+      aria-label="Your 2.50 t CO₂e vs benchmarks"
+      class="bm-track"
+      role="img"
+    >
+      <div
+        aria-label="You: 2.50 t CO₂e"
+        class="bm-marker"
+        role="img"
+        style="left: 15.625%; background: rgb(37, 99, 235);"
+        title="You: 2.50 t CO₂e"
+      />
+      <span
+        aria-hidden="true"
+        class="bm-label"
+        style="left: 15.625%; color: rgb(37, 99, 235);"
+      >
+        You
+      </span>
+      <div
+        aria-label="India avg: 2.20 t CO₂e"
+        class="bm-marker"
+        role="img"
+        style="left: 13.750000000000002%; background: rgb(217, 119, 6);"
+        title="India avg: 2.20 t CO₂e"
+      />
+      <span
+        aria-hidden="true"
+        class="bm-label"
+        style="left: 13.750000000000002%; color: rgb(217, 119, 6);"
+      >
+        India avg
+      </span>
+      <div
+        aria-label="Paris 2°C: 2.00 t CO₂e"
+        class="bm-marker"
+        role="img"
+        style="left: 12.5%; background: rgb(22, 163, 74);"
+        title="Paris 2°C: 2.00 t CO₂e"
+      />
+      <span
+        aria-hidden="true"
+        class="bm-label"
+        style="left: 12.5%; color: rgb(22, 163, 74);"
+      >
+        Paris 2°C
+      </span>
+      <div
+        aria-label="Global avg: 4.90 t CO₂e"
+        class="bm-marker"
+        role="img"
+        style="left: 30.625000000000004%; background: rgb(124, 58, 237);"
+        title="Global avg: 4.90 t CO₂e"
+      />
+      <span
+        aria-hidden="true"
+        class="bm-label"
+        style="left: 30.625000000000004%; color: rgb(124, 58, 237);"
+      >
+        Global avg
+      </span>
+    </div>
+    <div
+      class="bm-axis"
+    >
+      <span>
+        0
+      </span>
+      <span>
+        4t
+      </span>
+      <span>
+        8t
+      </span>
+      <span>
+        12t
+      </span>
+      <span>
+        16t
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,17 +1,16 @@
 /**
- * ActivityLog — Displays logged carbon activities in a table
+ * @component ActivityLog
+ * @description Displays logged carbon activities in a table.
+ *              Renders a reverse-chronological table of activity entries
+ *              with category, activity, amount, CO₂e, date, and remove action.
  *
- * Renders a reverse-chronological table of activity entries
- * with category, activity, amount, CO₂e, date, and remove action.
- *
- * @component
  * @param {Object} props
  * @param {Array<Object>} props.log - Array of activity log entries
- * @param {Function} props.onRemove - Callback receiving entry id to remove
- * @returns {React.ReactElement}
+ * @param {Function} props.dispatch - Reducer dispatch function
+ * @returns {JSX.Element}
  *
  * @example
- *   <ActivityLog log={log} onRemove={(id) => dispatch({ type: 'REMOVE', id })} />
+ * <ActivityLog log={log} dispatch={dispatch} />
  */
 
 import React from "react";
@@ -19,8 +18,9 @@ import PropTypes from "prop-types";
 import { CATEGORIES, EMISSION_FACTORS } from "../../data/constants";
 import { calcEmission } from "../../utils/carbonCalc";
 import { formatCO2 } from "../../utils/formatters";
+import "./ActivityLog.css";
 
-function ActivityLog({ log, onRemove }) {
+function ActivityLog({ log, dispatch }) {
   if (!log.length) {
     return <p className="empty-state">No activities logged yet. Add one above!</p>;
   }
@@ -64,7 +64,7 @@ function ActivityLog({ log, onRemove }) {
                 <td>
                   <button
                     className="btn-remove"
-                    onClick={() => onRemove(entry.id)}
+                    onClick={() => dispatch({ type: 'REMOVE', id: entry.id })}
                     aria-label={`Remove ${act?.label || entry.activityKey} entry`}
                   >
                     ✕
@@ -82,7 +82,6 @@ function ActivityLog({ log, onRemove }) {
 ActivityLog.displayName = "ActivityLog";
 
 ActivityLog.propTypes = {
-  /** Array of activity log entry objects */
   log: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
@@ -92,8 +91,7 @@ ActivityLog.propTypes = {
       ts: PropTypes.string.isRequired,
     })
   ).isRequired,
-  /** Callback fired when user clicks remove, receives entry id */
-  onRemove: PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 export default React.memo(ActivityLog);

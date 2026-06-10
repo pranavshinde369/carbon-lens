@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InsightsPanel matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="insights-heading"
+    class="insights-panel section-block"
+  >
+    <div
+      class="section-header"
+    >
+      <h2
+        id="insights-heading"
+      >
+        ✨ AI Climate Insights
+      </h2>
+      <button
+        aria-busy="false"
+        class="btn btn-primary"
+      >
+        Generate My Insights
+      </button>
+    </div>
+    <p
+      class="section-sub"
+    >
+      Get 3 AI-personalised tips based on your actual footprint data.
+    </p>
+  </section>
+</DocumentFragment>
+`;

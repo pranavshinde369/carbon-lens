@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppNav matches snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    aria-label="Main navigation"
+    class="bottom-nav"
+    role="navigation"
+  >
+    <div
+      aria-label="Application sections"
+      role="tablist"
+      style="display: contents;"
+    >
+      <button
+        aria-controls="panel-dashboard"
+        aria-selected="true"
+        class="nav-btn active"
+        id="tab-dashboard"
+        role="tab"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="true"
+        >
+          📊
+        </span>
+        <span
+          class="nav-label"
+        >
+          Dashboard
+        </span>
+      </button>
+      <button
+        aria-controls="panel-log"
+        aria-selected="false"
+        class="nav-btn "
+        id="tab-log"
+        role="tab"
+        tabindex="-1"
+      >
+        <span
+          aria-hidden="true"
+        >
+          ✏️
+        </span>
+        <span
+          class="nav-label"
+        >
+          Log Activity
+        </span>
+      </button>
+      <button
+        aria-controls="panel-tips"
+        aria-selected="false"
+        class="nav-btn "
+        id="tab-tips"
+        role="tab"
+        tabindex="-1"
+      >
+        <span
+          aria-hidden="true"
+        >
+          💡
+        </span>
+        <span
+          class="nav-label"
+        >
+          Tips
+        </span>
+      </button>
+      <button
+        aria-controls="panel-challenges"
+        aria-selected="false"
+        class="nav-btn "
+        id="tab-challenges"
+        role="tab"
+        tabindex="-1"
+      >
+        <span
+          aria-hidden="true"
+        >
+          🏆
+        </span>
+        <span
+          class="nav-label"
+        >
+          Challenges
+        </span>
+      </button>
+    </div>
+  </nav>
+</DocumentFragment>
+`;

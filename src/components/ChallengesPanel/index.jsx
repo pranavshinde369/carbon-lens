@@ -1,16 +1,21 @@
 /**
- * ChallengesPanel — Community sustainability challenges
+ * @component ChallengesPanel
+ * @description Displays community sustainability challenges.
+ *              Allows users to join challenges to commit to potential carbon savings.
  *
- * @component
  * @param {Object} props
  * @param {Array<string>} props.joined - IDs of joined challenges
  * @param {Function} props.onJoin - Callback receiving challenge id
- * @returns {React.ReactElement}
+ * @returns {JSX.Element}
+ *
+ * @example
+ * <ChallengesPanel joined={['c1']} onJoin={id => dispatch({type: 'JOIN_CHALLENGE', id})} />
  */
 
 import React from "react";
 import PropTypes from "prop-types";
 import { CHALLENGES } from "../../data/constants";
+import "./ChallengesPanel.css";
 
 function ChallengesPanel({ joined, onJoin }) {
   return (
@@ -20,7 +25,7 @@ function ChallengesPanel({ joined, onJoin }) {
         {CHALLENGES.map((ch) => {
           const isJoined = joined.includes(ch.id);
           return (
-            <div key={ch.id} className={`challenge-card ${isJoined ? "joined" : ""}`}>
+            <article key={ch.id} className={`challenge-card ${isJoined ? "joined" : ""}`}>
               <span className="ch-icon" aria-hidden="true">{ch.icon}</span>
               <h3 className="ch-title">{ch.title}</h3>
               <p className="ch-desc">{ch.description}</p>
@@ -37,7 +42,7 @@ function ChallengesPanel({ joined, onJoin }) {
               >
                 {isJoined ? "✓ Joined!" : "Join Challenge"}
               </button>
-            </div>
+            </article>
           );
         })}
       </div>

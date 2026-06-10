@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogActivity matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-labelledby="tab-log"
+    class="tab-content"
+    id="panel-log"
+    role="tabpanel"
+  >
+    <section
+      aria-labelledby="log-form-heading"
+      class="section-block"
+    >
+      <h2
+        id="log-form-heading"
+      >
+        Log an Activity
+      </h2>
+      <p
+        class="section-sub"
+      >
+        Track daily activities to get precise measurements.
+      </p>
+      <form
+        aria-label="Log a new activity"
+        class="activity-form"
+      >
+        <fieldset
+          style="padding: 0px; margin: 0px;"
+        >
+          <legend
+            class="sr-only"
+          >
+            Log a carbon activity
+          </legend>
+          <div
+            class="form-row"
+          >
+            <div
+              class="form-field"
+            >
+              <label
+                for="cat-select"
+              >
+                Category
+              </label>
+              <select
+                aria-required="true"
+                id="cat-select"
+              >
+                <option
+                  value="transport"
+                >
+                  🚗 Transport
+                </option>
+                <option
+                  value="energy"
+                >
+                  ⚡ Home Energy
+                </option>
+                <option
+                  value="food"
+                >
+                  🍽️ Food & Diet
+                </option>
+                <option
+                  value="shopping"
+                >
+                  🛍️ Shopping
+                </option>
+              </select>
+            </div>
+            <div
+              class="form-field"
+            >
+              <label
+                for="act-select"
+              >
+                Activity
+              </label>
+              <select
+                aria-required="true"
+                id="act-select"
+              >
+                <option
+                  value=""
+                >
+                  — Select —
+                </option>
+                <option
+                  value="car_petrol_small"
+                >
+                  Petrol Car (small) (km)
+                </option>
+                <option
+                  value="car_petrol_medium"
+                >
+                  Petrol Car (medium) (km)
+                </option>
+                <option
+                  value="car_diesel"
+                >
+                  Diesel Car (km)
+                </option>
+                <option
+                  value="car_electric"
+                >
+                  Electric Car (km)
+                </option>
+                <option
+                  value="two_wheeler"
+                >
+                  Two-Wheeler (km)
+                </option>
+                <option
+                  value="bus"
+                >
+                  City Bus (km)
+                </option>
+                <option
+                  value="metro_rail"
+                >
+                  Metro/Rail (km)
+                </option>
+                <option
+                  value="auto_rickshaw"
+                >
+                  Auto-Rickshaw (km)
+                </option>
+                <option
+                  value="flight_domestic"
+                >
+                  Domestic Flight (km)
+                </option>
+                <option
+                  value="flight_short"
+                >
+                  Short-Haul Flight (&lt;3h) (km)
+                </option>
+                <option
+                  value="flight_long"
+                >
+                  Long-Haul Flight (&gt;3h) (km)
+                </option>
+              </select>
+            </div>
+            <div
+              class="form-field"
+            >
+              <label
+                for="qty-input"
+              >
+                Amount 
+              </label>
+              <input
+                aria-describedby="qty-hint"
+                aria-invalid="false"
+                aria-required="true"
+                autocomplete="off"
+                id="qty-input"
+                inputmode="decimal"
+                min="0"
+                placeholder="0"
+                step="any"
+                type="number"
+                value=""
+              />
+              <span
+                class="sr-only"
+                id="qty-hint"
+              >
+                Enter quantity in the selected unit
+              </span>
+            </div>
+            <button
+              class="btn btn-primary"
+              type="submit"
+            >
+              + Log
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+    <section
+      aria-labelledby="log-table-heading"
+      class="section-block"
+    >
+      <div
+        class="section-header"
+      >
+        <h2
+          id="log-table-heading"
+          tabindex="-1"
+        >
+          Activity History
+        </h2>
+      </div>
+      <p
+        class="empty-state"
+      >
+        No activities logged yet. Add one above!
+      </p>
+    </section>
+  </div>
+</DocumentFragment>
+`;

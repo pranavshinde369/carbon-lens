@@ -1,0 +1,9 @@
+.progress-tracker { margin-bottom: 20px; }
+.progress-stats { display: flex; gap: 16px; margin-bottom: 20px; }
+.p-stat { flex: 1; background: var(--clr-bg); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--clr-border); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.p-val { font-family: var(--ff-head); font-size: 18px; font-weight: 700; color: var(--clr-text); }
+.p-label { font-size: 11px; color: var(--clr-text-2); margin-top: 4px; }
+.progress-bar-wrap { margin-top: 10px; }
+.progress-track { height: 10px; background: var(--clr-border); border-radius: 5px; overflow: hidden; position: relative; }
+.progress-fill { height: 100%; background: var(--clr-green); transition: width 0.3s ease; }
+.progress-labels { display: flex; justify-content: space-between; font-size: 11px; font-weight: 600; color: var(--clr-text-3); margin-top: 6px; }

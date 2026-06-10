@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChallengesPanel matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="challenges-heading"
+    class="challenges-panel"
+  >
+    <h2
+      id="challenges-heading"
+    >
+      Community Challenges
+    </h2>
+    <div
+      class="challenges-grid"
+    >
+      <article
+        class="challenge-card "
+      >
+        <span
+          aria-hidden="true"
+          class="ch-icon"
+        >
+          🥗
+        </span>
+        <h3
+          class="ch-title"
+        >
+          No-Meat Monday
+        </h3>
+        <p
+          class="ch-desc"
+        >
+          Skip meat every Monday for a month.
+        </p>
+        <div
+          class="ch-meta"
+        >
+          <span>
+            🗓 4 weeks
+          </span>
+          <span>
+            💚 Saves ~68 kg
+          </span>
+        </div>
+        <p
+          class="ch-participants"
+        >
+          1,247 participants
+        </p>
+        <button
+          aria-label="Join No-Meat Monday challenge"
+          class="btn btn-green"
+        >
+          Join Challenge
+        </button>
+      </article>
+      <article
+        class="challenge-card "
+      >
+        <span
+          aria-hidden="true"
+          class="ch-icon"
+        >
+          🚶
+        </span>
+        <h3
+          class="ch-title"
+        >
+          Car-Free Week
+        </h3>
+        <p
+          class="ch-desc"
+        >
+          Walk, cycle, or take public transport all week.
+        </p>
+        <div
+          class="ch-meta"
+        >
+          <span>
+            🗓 7 days
+          </span>
+          <span>
+            💚 Saves ~45 kg
+          </span>
+        </div>
+        <p
+          class="ch-participants"
+        >
+          892 participants
+        </p>
+        <button
+          aria-label="Join Car-Free Week challenge"
+          class="btn btn-green"
+        >
+          Join Challenge
+        </button>
+      </article>
+      <article
+        class="challenge-card "
+      >
+        <span
+          aria-hidden="true"
+          class="ch-icon"
+        >
+          💡
+        </span>
+        <h3
+          class="ch-title"
+        >
+          Energy Audit Month
+        </h3>
+        <p
+          class="ch-desc"
+        >
+          Track and cut home energy use by 20%.
+        </p>
+        <div
+          class="ch-meta"
+        >
+          <span>
+            🗓 30 days
+          </span>
+          <span>
+            💚 Saves ~120 kg
+          </span>
+        </div>
+        <p
+          class="ch-participants"
+        >
+          534 participants
+        </p>
+        <button
+          aria-label="Join Energy Audit Month challenge"
+          class="btn btn-green"
+        >
+          Join Challenge
+        </button>
+      </article>
+      <article
+        class="challenge-card "
+      >
+        <span
+          aria-hidden="true"
+          class="ch-icon"
+        >
+          ♻️
+        </span>
+        <h3
+          class="ch-title"
+        >
+          Zero Food Waste Week
+        </h3>
+        <p
+          class="ch-desc"
+        >
+          Use up all food before buying more.
+        </p>
+        <div
+          class="ch-meta"
+        >
+          <span>
+            🗓 7 days
+          </span>
+          <span>
+            💚 Saves ~25 kg
+          </span>
+        </div>
+        <p
+          class="ch-participants"
+        >
+          2,108 participants
+        </p>
+        <button
+          aria-label="Join Zero Food Waste Week challenge"
+          class="btn btn-green"
+        >
+          Join Challenge
+        </button>
+      </article>
+    </div>
+  </section>
+</DocumentFragment>
+`;

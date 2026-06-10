@@ -5,7 +5,16 @@
  * @module carbonCalc
  */
 
-import { EMISSION_FACTORS, BENCHMARKS } from "../data/constants";
+import { 
+  EMISSION_FACTORS, 
+  BENCHMARKS,
+  WORKING_DAYS_PER_YEAR,
+  MONTHS_PER_YEAR,
+  BASE_FOOD_MONTHLY_KG_CO2E,
+  BASE_SHOPPING_MONTHLY_KG_CO2E,
+  DEFAULT_COMMUTE_MONTHLY_KWH,
+  DEFAULT_LPG_CYLINDERS
+} from "../data/constants";
 
 // Re-export formatters for backward compatibility
 export { formatCO2, annualToDaily, toEquivalency } from "./formatters";
@@ -99,32 +108,21 @@ export function compareToBenchmarks(annualKgCO2e) {
 export function estimateFromQuiz(answers) {
   let total = 0;
 
-  /** @constant {number} Approximate working days per year */
-  const WORKING_DAYS_PER_YEAR = 260;
-  /** @constant {number} Months per year */
-  const MONTHS_PER_YEAR = 12;
-  /** @constant {number} Base monthly food footprint in kg CO₂e */
-  const BASE_FOOD_MONTHLY = 180;
-  /** @constant {number} Base monthly shopping footprint in kg CO₂e */
-  const BASE_SHOPPING_MONTHLY = 140;
-  /** @constant {number} Default monthly electricity units */
-  const DEFAULT_MONTHLY_UNITS = 100;
-
   // Transport
   const commuteKm = (answers.commuteKm || 0) * WORKING_DAYS_PER_YEAR;
   total += calcEmission("transport", answers.commuteMode || "bus", commuteKm);
 
   // Energy
-  total += calcEmission("energy", "electricity", (answers.monthlyUnits || DEFAULT_MONTHLY_UNITS) * MONTHS_PER_YEAR);
-  total += calcEmission("energy", "lpg", (answers.lpgCylinders || 1) * MONTHS_PER_YEAR);
+  total += calcEmission("energy", "electricity", (answers.monthlyUnits || DEFAULT_COMMUTE_MONTHLY_KWH) * MONTHS_PER_YEAR);
+  total += calcEmission("energy", "lpg", (answers.lpgCylinders || DEFAULT_LPG_CYLINDERS) * MONTHS_PER_YEAR);
 
   // Food
   const foodMultiplier = { vegan: 0.6, vegetarian: 0.8, mixed: 1.0, meat_heavy: 1.4 };
-  total += BASE_FOOD_MONTHLY * MONTHS_PER_YEAR * (foodMultiplier[answers.dietType] || 1.0);
+  total += BASE_FOOD_MONTHLY_KG_CO2E * MONTHS_PER_YEAR * (foodMultiplier[answers.dietType] || 1.0);
 
   // Shopping
   const shoppingMultiplier = { minimal: 0.6, average: 1.0, frequent: 1.5 };
-  total += BASE_SHOPPING_MONTHLY * MONTHS_PER_YEAR * (shoppingMultiplier[answers.shoppingFreq] || 1.0);
+  total += BASE_SHOPPING_MONTHLY_KG_CO2E * MONTHS_PER_YEAR * (shoppingMultiplier[answers.shoppingFreq] || 1.0);
 
   return Math.round(total);
 }

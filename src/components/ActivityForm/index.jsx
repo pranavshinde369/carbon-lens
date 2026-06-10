@@ -1,19 +1,17 @@
 /**
- * ActivityForm — Log a new carbon activity entry
+ * @component ActivityForm
+ * @description Form for logging individual carbon-emitting activities.
+ *              Validates input, calculates real-time emission preview,
+ *              and calls onAdd with sanitised payload on submission.
  *
- * Provides a form with category, activity, and quantity selectors.
- * Shows a live emission preview (debounced) and validates input
- * before calling the onAdd callback.
+ * @param {Object}   props
+ * @param {Function} props.onAdd - Callback invoked with {category, activityKey, quantity}
  *
- * @component
- * @param {Object} props
- * @param {Function} props.onAdd - Callback receiving { category, activityKey, quantity }
- * @returns {React.ReactElement}
+ * @returns {JSX.Element} Controlled form with category/activity/quantity fields
  *
  * @example
- *   <ActivityForm onAdd={(payload) => dispatch({ type: 'ADD', payload })} />
+ * <ActivityForm onAdd={(entry) => dispatch({ type: 'ADD', payload: entry })} />
  */
-
 import React, { useState, useMemo } from "react";
 import PropTypes from "prop-types";
 import { CATEGORIES, EMISSION_FACTORS } from "../../data/constants";
@@ -21,7 +19,7 @@ import { calcEmission } from "../../utils/carbonCalc";
 import { formatCO2 } from "../../utils/formatters";
 import { sanitiseNumber } from "../../utils/sanitise";
 import { useDebounce } from "../../hooks/useDebounce";
-
+import "./ActivityForm.css";
 function ActivityForm({ onAdd }) {
   const [category, setCategory] = useState("transport");
   const [activityKey, setActivityKey] = useState("");

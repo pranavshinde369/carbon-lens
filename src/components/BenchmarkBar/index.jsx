@@ -1,18 +1,21 @@
 /**
- * BenchmarkBar — Visual benchmark comparison
+ * @component BenchmarkBar
+ * @description Visual benchmark comparison against India avg, Global avg, and Paris target.
+ *              Renders a responsive scale with marked milestones.
  *
- * @component
  * @param {Object} props
  * @param {number} props.annualKg - User's annual footprint in kg CO₂e
- * @returns {React.ReactElement}
+ * @returns {JSX.Element}
+ *
+ * @example
+ * <BenchmarkBar annualKg={2800} />
  */
 
 import React, { useMemo } from "react";
 import PropTypes from "prop-types";
-import { BENCHMARKS } from "../../data/constants";
+import { BENCHMARKS, BENCHMARK_SCALE_MAX_KG } from "../../data/constants";
 import { formatCO2 } from "../../utils/formatters";
-
-const MAX_SCALE = 16000;
+import "./BenchmarkBar.css";
 
 function BenchmarkBar({ annualKg }) {
   const marks = useMemo(
@@ -32,12 +35,15 @@ function BenchmarkBar({ annualKg }) {
           <React.Fragment key={m.label}>
             <div
               className="bm-marker"
-              style={{ left: `${(m.val / MAX_SCALE) * 100}%`, background: m.color }}
+              style={{ left: `${(m.val / BENCHMARK_SCALE_MAX_KG) * 100}%`, background: m.color }}
+              role="img"
+              aria-label={`${m.label}: ${formatCO2(m.val)}`}
               title={`${m.label}: ${formatCO2(m.val)}`}
             />
             <span
               className="bm-label"
-              style={{ left: `${(m.val / MAX_SCALE) * 100}%`, color: m.color }}
+              style={{ left: `${(m.val / BENCHMARK_SCALE_MAX_KG) * 100}%`, color: m.color }}
+              aria-hidden="true"
             >
               {m.label}
             </span>

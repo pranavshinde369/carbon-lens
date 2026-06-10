@@ -1,0 +1,63 @@
+/* ─── Benchmark Bar ──────────────────────────────────────────── */
+
+.benchmark-bar-wrap { padding: 8px 0; }
+
+.bm-track {
+  position: relative;
+  height: 8px;
+  background: linear-gradient(to right, #dcfce7, #fef3c7, #fee2e2);
+  border-radius: 4px;
+  margin: 32px 0 24px;
+}
+
+.bm-marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.bm-label {
+  position: absolute;
+  top: -22px;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.bm-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--clr-text-3);
+}
+
+.bench-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.bench-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.bench-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.bench-name { flex: 1; color: var(--clr-text-2); }
+.bench-val  { font-weight: 700; font-size: 13px; }

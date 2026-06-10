@@ -1,18 +1,16 @@
 /**
- * TrendChart — Monthly carbon footprint trend by category
+ * @component TrendChart
+ * @description Renders a stacked area chart using Recharts showing monthly
+ *              emissions across transport, energy, food, and shopping categories.
+ *              Includes a hidden data table for screen reader accessibility.
  *
- * Renders a stacked area chart using Recharts showing monthly
- * emissions across transport, energy, food, and shopping categories.
- * Includes a hidden data table for screen reader accessibility.
- *
- * @component
  * @param {Object} props
  * @param {Array<Object>} props.data - Monthly data array with month, transport, energy, food, shopping
  * @param {boolean} props.reducedMotion - Whether to disable chart animations
- * @returns {React.ReactElement}
+ * @returns {JSX.Element}
  *
  * @example
- *   <TrendChart data={DEMO_MONTHLY_DATA} reducedMotion={false} />
+ * <TrendChart data={DEMO_MONTHLY_DATA} reducedMotion={false} />
  */
 
 import React, { useMemo } from "react";
@@ -22,6 +20,7 @@ import {
   ResponsiveContainer, Legend,
 } from "recharts";
 import { CATEGORIES } from "../../data/constants";
+import "./TrendChart.css";
 
 /** @constant Chart colour mapping by category ID */
 const CHART_COLORS = {
@@ -42,12 +41,33 @@ function TrendChart({ data, reducedMotion }) {
     [data]
   );
 
+  const avg = useMemo(() => {
+    if (!data.length) return { transport: 0, energy: 0, food: 0, shopping: 0 };
+    const sums = data.reduce((acc, curr) => ({
+      transport: acc.transport + curr.transport,
+      energy: acc.energy + curr.energy,
+      food: acc.food + curr.food,
+      shopping: acc.shopping + curr.shopping,
+    }), { transport: 0, energy: 0, food: 0, shopping: 0 });
+    const len = data.length;
+    return {
+      transport: sums.transport / len,
+      energy: sums.energy / len,
+      food: sums.food / len,
+      shopping: sums.shopping / len,
+    };
+  }, [data]);
+
   return (
     <>
       <div
         className="chart-wrapper"
         role="img"
-        aria-label="Monthly carbon footprint trend by category"
+        aria-label={`Area chart showing monthly carbon footprint. 
+          Transport averages ${Math.round(avg.transport)} kg/month, 
+          Energy ${Math.round(avg.energy)} kg/month,
+          Food ${Math.round(avg.food)} kg/month,
+          Shopping ${Math.round(avg.shopping)} kg/month.`}
       >
         <ResponsiveContainer width="100%" height={260}>
           <AreaChart data={chartData} margin={{ top: 8, right: 16, left: 0, bottom: 0 }}>
