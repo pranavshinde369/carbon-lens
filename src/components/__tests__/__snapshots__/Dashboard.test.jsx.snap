@@ -406,9 +406,7 @@ exports[`Dashboard matches snapshot 1`] = `
           Category Breakdown
         </h2>
         <div
-          aria-label="Pie chart: Transport 29%, Home Energy 26%, Food & Diet 31%, Shopping 14%"
           class="pie-container"
-          role="img"
         >
           <div
             class="recharts-responsive-container"

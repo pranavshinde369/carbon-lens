@@ -3,9 +3,7 @@
 exports[`BreakdownPie matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    aria-label="Pie chart: Transport 100%"
     class="pie-container"
-    role="img"
   >
     <div
       class="recharts-responsive-container"
