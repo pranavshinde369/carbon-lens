@@ -1,0 +1,14 @@
+{
+  "short_name": "CarbonLens",
+  "name": "CarbonLens — Carbon Footprint Platform",
+  "description": "Track, understand, and reduce your personal carbon footprint",
+  "icons": [
+    { "src": "favicon.ico", "sizes": "64x64 32x32 24x24 16x16", "type": "image/x-icon" }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#16a34a",
+  "background_color": "#f5f6f2",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "lifestyle", "utilities"]
+}
