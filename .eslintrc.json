@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest"
+  ],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": ["warn", { "allow": ["error", "warn"] }],
+    "react/prop-types": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "jsx-a11y/aria-proptypes": "error",
+    "jsx-a11y/aria-role": "error",
+    "jsx-a11y/label-has-associated-control": "warn",
+    "jsx-a11y/no-redundant-roles": "warn"
+  }
+}

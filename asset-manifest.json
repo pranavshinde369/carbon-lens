@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/carbon-lens/static/css/main.56081ee5.css",
+    "main.js": "/carbon-lens/static/js/main.a6e0c16f.js",
+    "static/js/82.7336479b.chunk.js": "/carbon-lens/static/js/82.7336479b.chunk.js",
+    "static/js/990.88d2cf27.chunk.js": "/carbon-lens/static/js/990.88d2cf27.chunk.js",
+    "static/js/126.b5c2d350.chunk.js": "/carbon-lens/static/js/126.b5c2d350.chunk.js",
+    "index.html": "/carbon-lens/index.html",
+    "main.56081ee5.css.map": "/carbon-lens/static/css/main.56081ee5.css.map",
+    "main.a6e0c16f.js.map": "/carbon-lens/static/js/main.a6e0c16f.js.map",
+    "82.7336479b.chunk.js.map": "/carbon-lens/static/js/82.7336479b.chunk.js.map",
+    "990.88d2cf27.chunk.js.map": "/carbon-lens/static/js/990.88d2cf27.chunk.js.map",
+    "126.b5c2d350.chunk.js.map": "/carbon-lens/static/js/126.b5c2d350.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56081ee5.css",
+    "static/js/main.a6e0c16f.js"
+  ]
+}
