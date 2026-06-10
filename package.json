@@ -2,8 +2,11 @@
   "name": "carbon-footprint-platform",
   "version": "1.0.0",
   "description": "AI-powered carbon footprint awareness and reduction platform for individuals",
+  "homepage": "https://pranavshinde369.github.io/carbon-lens",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage --watchAll=false",
@@ -13,18 +16,19 @@
     "audit:fix": "npm audit fix"
   },
   "dependencies": {
+    "date-fns": "^3.6.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
-    "recharts": "^2.12.7",
-    "date-fns": "^3.6.0"
+    "recharts": "^2.12.7"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "eslint": "^8.57.0",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.3.2"
   },
   "jest": {
@@ -44,10 +48,22 @@
         "statements": 80
       }
     },
-    "coverageReporters": ["text", "lcov", "text-summary"]
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "text-summary"
+    ]
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
