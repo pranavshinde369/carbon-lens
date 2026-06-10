@@ -17,6 +17,14 @@
 - **Community Challenges** — Join sustainability challenges with thousands of participants
 - **Offline-First** — localStorage persistence with PWA support
 
+## 📸 Screenshots
+
+| Dashboard | Log Activity |
+|:---:|:---:|
+| ![Dashboard](docs/dashboard.png) | ![Log Activity](docs/log_activity.png) |
+| **Personalised Tips** | **Community Challenges** |
+| ![Tips](docs/tips.png) | ![Challenges](docs/challenges.png) |
+
 ## 🏗️ Architecture
 
 ```

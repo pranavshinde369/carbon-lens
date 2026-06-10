@@ -17,6 +17,7 @@ import { formatCO2 } from "./utils/formatters";
 import { loadState, saveState } from "./utils/storage";
 import { useReducedMotion } from "./hooks/useReducedMotion";
 import logReducer from "./reducers/logReducer";
+import "./App.css";
 
 // ─── Eagerly loaded components (always visible) ───────────────────────────────
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
@@ -32,8 +33,6 @@ import ActivityForm from "./components/ActivityForm/ActivityForm";
 const ActivityLog = React.lazy(() => import("./components/ActivityLog/ActivityLog"));
 const TipsPanel = React.lazy(() => import("./components/TipsPanel/TipsPanel"));
 const ChallengesPanel = React.lazy(() => import("./components/ChallengesPanel/ChallengesPanel"));
-
-import "./App.css";
 
 // ─── Tab definitions ──────────────────────────────────────────────────────────
 
@@ -62,9 +61,9 @@ export default function App() {
   const prefersReducedMotion = useReducedMotion();
 
   // ─── Persist state ────────────────────────────────────────────────────────
-  useEffect(() => saveState("activity_log", log), [log]);
-  useEffect(() => saveState("tips", completedTips), [completedTips]);
-  useEffect(() => saveState("challenges", joinedChallenges), [joinedChallenges]);
+  useEffect(() => { saveState("activity_log", log); }, [log]);
+  useEffect(() => { saveState("tips", completedTips); }, [completedTips]);
+  useEffect(() => { saveState("challenges", joinedChallenges); }, [joinedChallenges]);
 
   // ─── Derived state (memoised) ─────────────────────────────────────────────
   const breakdown = useMemo(() => aggregateEmissions(log), [log]);
