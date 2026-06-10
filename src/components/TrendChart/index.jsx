@@ -69,7 +69,7 @@ function TrendChart({ data, reducedMotion }) {
           Food ${Math.round(avg.food)} kg/month,
           Shopping ${Math.round(avg.shopping)} kg/month.`}
       >
-        <ResponsiveContainer width="100%" height={260}>
+        <ResponsiveContainer width="100%" height={260} role="img" aria-label="Area chart showing monthly carbon footprint trend">
           <AreaChart data={chartData} margin={{ top: 8, right: 16, left: 0, bottom: 0 }}>
             <defs>
               {CATEGORIES.map((c) => (

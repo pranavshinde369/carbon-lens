@@ -53,10 +53,8 @@ function BreakdownPie({ byCategory, reducedMotion }) {
   return (
     <div
       className="pie-container"
-      role="img"
-      aria-label={`Pie chart: ${ariaDescription}`}
     >
-      <ResponsiveContainer width="100%" height={220}>
+      <ResponsiveContainer width="100%" height={220} role="img" aria-label={`Pie chart: ${ariaDescription}`}>
         <PieChart>
           <Pie
             data={data}
