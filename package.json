@@ -8,9 +8,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test --coverage --watchAll=false",
     "lint": "eslint src --ext .js,.jsx --report-unused-disable-directives",
-    "format": "prettier --write src/**/*.{js,jsx,css}"
+    "format": "prettier --write src/**/*.{js,jsx,css}",
+    "audit": "npm audit --audit-level=moderate",
+    "audit:fix": "npm audit fix"
   },
   "dependencies": {
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -23,6 +26,25 @@
     "@testing-library/user-event": "^14.5.2",
     "eslint": "^8.57.0",
     "prettier": "^3.3.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/utils/**/*.{js,jsx}",
+      "src/reducers/**/*.{js,jsx}",
+      "src/hooks/**/*.{js,jsx}",
+      "src/components/ActivityForm/**/*.{js,jsx}",
+      "!src/**/*.test.{js,jsx}",
+      "!src/**/*.css"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 80,
+        "functions": 75,
+        "branches": 65,
+        "statements": 80
+      }
+    },
+    "coverageReporters": ["text", "lcov", "text-summary"]
   },
   "browserslist": {
     "production": [">0.2%", "not dead", "not op_mini all"],

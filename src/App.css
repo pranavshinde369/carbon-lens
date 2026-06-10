@@ -19,7 +19,7 @@
 
   --clr-text:      #1a1f16;
   --clr-text-2:    #52574e;
-  --clr-text-3:    #8b9087;
+  --clr-text-3:    #5a5f56;  /* darkened from #8b9087 for WCAG 4.5:1 contrast */
 
   --clr-green:     #16a34a;
   --clr-green-bg:  #dcfce7;
@@ -79,7 +79,7 @@ body {
   font-weight: 600; text-decoration: none;
   transition: top 0.2s;
 }
-.skip-link:focus { top: 8px; }
+.skip-link:focus { top: 8px; outline: 2px solid #fff; }
 
 /* Focus ring — visible for keyboard users */
 :focus-visible {
@@ -961,4 +961,39 @@ body {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+  .quiz-bar { transition: none; }
+  .quiz-option:hover { transform: none; }
+  .challenge-card:hover { transform: none; }
+  .recharts-wrapper * { animation: none !important; transition: none !important; }
+}
+
+/* ─── Error Boundary ─────────────────────────────────────────── */
+
+.error-boundary {
+  text-align: center;
+  padding: 48px 24px;
+  background: var(--clr-danger-bg);
+  border: 1px solid var(--clr-danger);
+  border-radius: var(--radius-lg);
+  margin: 20px;
+}
+
+.error-boundary h2 {
+  font-family: var(--ff-head);
+  color: var(--clr-danger);
+  margin-bottom: 8px;
+}
+
+.error-boundary p {
+  color: var(--clr-text-2);
+  margin-bottom: 16px;
+}
+
+/* ─── Tab Loading ────────────────────────────────────────────── */
+
+.tab-loading {
+  text-align: center;
+  padding: 32px;
+  font-size: 14px;
+  color: var(--clr-text-3);
 }
