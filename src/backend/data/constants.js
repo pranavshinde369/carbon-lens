@@ -18,6 +18,7 @@ export const DEFAULT_COMMUTE_MONTHLY_KWH   = 100;
 export const DEFAULT_LPG_CYLINDERS         = 1;
 export const BASE_FOOD_MONTHLY_KG_CO2E     = 180;
 export const BASE_SHOPPING_MONTHLY_KG_CO2E = 140;
+export const DEFAULT_DASHBOARD_BREAKDOWN   = { total: 2800, byCategory: { transport: 29, energy: 26, food: 31, shopping: 14 } };
 
 // ─── Emission Factors ─────────────────────────────────────────────────────────
 
