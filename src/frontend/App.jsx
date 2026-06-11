@@ -4,16 +4,10 @@
  *              All UI is delegated to components in ./components/
  */
 import React, { useState, useCallback, useMemo } from 'react';
-import AppHeader     from './components/AppHeader';
-import AppNav        from './components/AppNav';
-import ErrorBoundary from './components/ErrorBoundary';
-import OnboardingQuiz from './components/OnboardingQuiz';
-import { useActivityLog }      from './hooks/useActivityLog';
-import { useAnnualFootprint }  from './hooks/useAnnualFootprint';
-import { usePersistedState }   from './hooks/usePersistedState';
-import { TABS }                from './data/constants';
-import { aggregateEmissions }  from './utils/carbonCalc';
-import './App.css';
+import { AppHeader, AppNav, ErrorBoundary, OnboardingQuiz } from './components';
+import { useActivityLog, useAnnualFootprint, usePersistedState } from '../backend/hooks';
+import { aggregateEmissions, estimateFromQuiz } from '../backend/utils';
+import './styles/App.css';
 
 const Dashboard      = React.lazy(() => import('./components/Dashboard'));
 const LogActivity    = React.lazy(() => import('./components/LogActivity'));
@@ -40,7 +34,6 @@ export default function App() {
   const TabContent = TAB_COMPONENTS[tab];
 
   const handleQuizComplete = useCallback(answers => { 
-    const { estimateFromQuiz } = require('./utils/carbonCalc');
     setQuizEstimate(estimateFromQuiz(answers)); 
     setShowQuiz(false); 
   }, [setQuizEstimate, setShowQuiz]);
