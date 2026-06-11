@@ -1,0 +1,603 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-labelledby="tab-dashboard"
+    class="tab-content"
+    id="panel-dashboard"
+    role="tabpanel"
+  >
+    <div
+      style="display: flex; justify-content: flex-end;"
+    >
+      <button
+        aria-label="Share my carbon footprint progress"
+        class="btn btn-outline"
+      >
+        📤 Share My Progress
+      </button>
+    </div>
+    <div
+      aria-label="Carbon footprint summary"
+      class="summary-cards"
+      role="region"
+    >
+      <div
+        class="summary-card"
+      >
+        <p
+          class="card-label"
+        >
+          Your Annual Footprint
+        </p>
+        <p
+          class="card-value"
+        >
+          2.50 t CO₂e
+        </p>
+        <p
+          class="card-sub"
+        >
+          ≈ 11,905 trees planted for a year
+        </p>
+      </div>
+      <div
+        class="summary-card"
+      >
+        <p
+          class="card-label"
+        >
+          Daily Average
+        </p>
+        <p
+          class="card-value"
+        >
+          7 kg CO₂e
+        </p>
+        <p
+          class="card-sub"
+        >
+          per day
+        </p>
+      </div>
+      <div
+        class="summary-card"
+      >
+        <p
+          class="card-label"
+        >
+          vs. India Urban Avg
+        </p>
+        <p
+          class="card-value"
+        >
+          113.6%
+        </p>
+        <p
+          class="card-sub"
+        >
+          avg 2.20 t CO₂e/yr
+        </p>
+      </div>
+      <div
+        class="summary-card"
+      >
+        <p
+          class="card-label"
+        >
+          Paris Target Gap
+        </p>
+        <p
+          class="card-value"
+        >
+          +500 kg CO₂e
+        </p>
+        <p
+          class="card-sub"
+        >
+          2°C pathway = 2t/yr
+        </p>
+      </div>
+    </div>
+    <section
+      aria-labelledby="progress-heading"
+      class="section-block progress-tracker"
+    >
+      <h2
+        id="progress-heading"
+      >
+        My Reduction Journey
+      </h2>
+      <div
+        class="progress-stats"
+      >
+        <div
+          class="p-stat"
+        >
+          <span
+            class="p-val"
+          >
+            0
+          </span>
+          <span
+            class="p-label"
+          >
+            kg CO₂e/yr potential savings
+          </span>
+        </div>
+        <div
+          class="p-stat"
+        >
+          <span
+            class="p-val"
+          >
+            2.5t
+          </span>
+          <span
+            class="p-label"
+          >
+            projected footprint
+          </span>
+        </div>
+        <div
+          class="p-stat"
+        >
+          <span
+            class="p-val"
+          >
+            0
+          </span>
+          <span
+            class="p-label"
+          >
+            actions committed
+          </span>
+        </div>
+      </div>
+      <div
+        aria-label="0% progress toward Paris climate target"
+        class="progress-bar-wrap"
+      >
+        <div
+          aria-valuemax="100"
+          aria-valuemin="0"
+          aria-valuenow="0"
+          class="progress-track"
+          role="progressbar"
+        >
+          <div
+            class="progress-fill"
+            style="width: 0%;"
+          />
+        </div>
+        <div
+          class="progress-labels"
+        >
+          <span>
+            Current: 2.5t
+          </span>
+          <span>
+            Paris target: 2t
+          </span>
+        </div>
+      </div>
+      <p
+        aria-live="polite"
+        class="empty-state"
+      >
+        Commit to tips and join challenges to track your progress here.
+      </p>
+    </section>
+    <section
+      aria-labelledby="insights-heading"
+      class="insights-panel section-block"
+    >
+      <div
+        class="section-header"
+      >
+        <h2
+          id="insights-heading"
+        >
+          ✨ AI Climate Insights
+        </h2>
+        <button
+          aria-busy="false"
+          class="btn btn-primary"
+        >
+          Generate My Insights
+        </button>
+      </div>
+      <p
+        class="section-sub"
+      >
+        Get 3 AI-personalised tips based on your actual footprint data.
+      </p>
+    </section>
+    <section
+      aria-labelledby="trend-heading"
+      class="section-block"
+    >
+      <h2
+        id="trend-heading"
+        tabindex="-1"
+      >
+        Monthly Trend
+      </h2>
+      <div
+        aria-label="Area chart showing monthly carbon footprint. 
+          Transport averages 184 kg/month, 
+          Energy 187 kg/month,
+          Food 248 kg/month,
+          Shopping 72 kg/month."
+        class="chart-wrapper"
+        role="img"
+      >
+        <div
+          class="recharts-responsive-container"
+          style="width: 100%; height: 260px; min-width: 0;"
+        />
+      </div>
+      <div
+        aria-label="Monthly trend data table"
+        class="sr-only"
+      >
+        <table>
+          <caption>
+            Monthly carbon emissions by category (kg CO₂e)
+          </caption>
+          <thead>
+            <tr>
+              <th>
+                Month
+              </th>
+              <th>
+                Transport
+              </th>
+              <th>
+                Energy
+              </th>
+              <th>
+                Food
+              </th>
+              <th>
+                Shopping
+              </th>
+              <th>
+                Total
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Jan
+              </td>
+              <td>
+                185
+              </td>
+              <td>
+                210
+              </td>
+              <td>
+                260
+              </td>
+              <td>
+                95
+              </td>
+              <td>
+                750
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Feb
+              </td>
+              <td>
+                175
+              </td>
+              <td>
+                195
+              </td>
+              <td>
+                250
+              </td>
+              <td>
+                40
+              </td>
+              <td>
+                660
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Mar
+              </td>
+              <td>
+                200
+              </td>
+              <td>
+                170
+              </td>
+              <td>
+                255
+              </td>
+              <td>
+                125
+              </td>
+              <td>
+                750
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Apr
+              </td>
+              <td>
+                195
+              </td>
+              <td>
+                140
+              </td>
+              <td>
+                245
+              </td>
+              <td>
+                55
+              </td>
+              <td>
+                635
+              </td>
+            </tr>
+            <tr>
+              <td>
+                May
+              </td>
+              <td>
+                180
+              </td>
+              <td>
+                185
+              </td>
+              <td>
+                240
+              </td>
+              <td>
+                70
+              </td>
+              <td>
+                675
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Jun
+              </td>
+              <td>
+                170
+              </td>
+              <td>
+                220
+              </td>
+              <td>
+                235
+              </td>
+              <td>
+                45
+              </td>
+              <td>
+                670
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div
+      class="two-col"
+    >
+      <section
+        aria-labelledby="breakdown-heading"
+        class="section-block"
+      >
+        <h2
+          id="breakdown-heading"
+        >
+          Category Breakdown
+        </h2>
+        <div
+          aria-label="Donut chart showing carbon footprint by category: Transport 29%, Home Energy 26%, Food & Diet 31%, Shopping 14%"
+          class="pie-container"
+          role="img"
+        >
+          <div
+            class="recharts-responsive-container"
+            style="width: 100%; height: 220px; min-width: 0;"
+          />
+          <div
+            class="pie-legend"
+            role="list"
+          >
+            <div
+              class="legend-row"
+              role="listitem"
+            >
+              <span
+                aria-hidden="true"
+                class="legend-dot"
+                style="background: rgb(37, 99, 235);"
+              />
+              <span
+                class="legend-name"
+              >
+                🚗 Transport
+              </span>
+              <span
+                class="legend-val"
+              >
+                29%
+              </span>
+            </div>
+            <div
+              class="legend-row"
+              role="listitem"
+            >
+              <span
+                aria-hidden="true"
+                class="legend-dot"
+                style="background: rgb(22, 163, 74);"
+              />
+              <span
+                class="legend-name"
+              >
+                ⚡ Home Energy
+              </span>
+              <span
+                class="legend-val"
+              >
+                26%
+              </span>
+            </div>
+            <div
+              class="legend-row"
+              role="listitem"
+            >
+              <span
+                aria-hidden="true"
+                class="legend-dot"
+                style="background: rgb(217, 119, 6);"
+              />
+              <span
+                class="legend-name"
+              >
+                🍽️ Food & Diet
+              </span>
+              <span
+                class="legend-val"
+              >
+                31%
+              </span>
+            </div>
+            <div
+              class="legend-row"
+              role="listitem"
+            >
+              <span
+                aria-hidden="true"
+                class="legend-dot"
+                style="background: rgb(124, 58, 237);"
+              />
+              <span
+                class="legend-name"
+              >
+                🛍️ Shopping
+              </span>
+              <span
+                class="legend-val"
+              >
+                14%
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        aria-labelledby="benchmark-heading"
+        class="section-block"
+      >
+        <h2
+          id="benchmark-heading"
+        >
+          How You Compare
+        </h2>
+        <div
+          aria-label="Carbon footprint benchmark comparison"
+          class="benchmark-bar-wrap"
+        >
+          <div
+            aria-label="Your 2.50 t CO₂e vs benchmarks"
+            class="bm-track"
+            role="img"
+          >
+            <div
+              aria-label="You: 2.50 t CO₂e"
+              class="bm-marker"
+              role="img"
+              style="left: 15.625%; background: rgb(37, 99, 235);"
+              title="You: 2.50 t CO₂e"
+            />
+            <span
+              aria-hidden="true"
+              class="bm-label"
+              style="left: 15.625%; color: rgb(37, 99, 235);"
+            >
+              You
+            </span>
+            <div
+              aria-label="India avg: 2.20 t CO₂e"
+              class="bm-marker"
+              role="img"
+              style="left: 13.750000000000002%; background: rgb(217, 119, 6);"
+              title="India avg: 2.20 t CO₂e"
+            />
+            <span
+              aria-hidden="true"
+              class="bm-label"
+              style="left: 13.750000000000002%; color: rgb(217, 119, 6);"
+            >
+              India avg
+            </span>
+            <div
+              aria-label="Paris 2°C: 2.00 t CO₂e"
+              class="bm-marker"
+              role="img"
+              style="left: 12.5%; background: rgb(22, 163, 74);"
+              title="Paris 2°C: 2.00 t CO₂e"
+            />
+            <span
+              aria-hidden="true"
+              class="bm-label"
+              style="left: 12.5%; color: rgb(22, 163, 74);"
+            >
+              Paris 2°C
+            </span>
+            <div
+              aria-label="Global avg: 4.90 t CO₂e"
+              class="bm-marker"
+              role="img"
+              style="left: 30.625000000000004%; background: rgb(124, 58, 237);"
+              title="Global avg: 4.90 t CO₂e"
+            />
+            <span
+              aria-hidden="true"
+              class="bm-label"
+              style="left: 30.625000000000004%; color: rgb(124, 58, 237);"
+            >
+              Global avg
+            </span>
+          </div>
+          <div
+            class="bm-axis"
+          >
+            <span>
+              0
+            </span>
+            <span>
+              4t
+            </span>
+            <span>
+              8t
+            </span>
+            <span>
+              12t
+            </span>
+            <span>
+              16t
+            </span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;

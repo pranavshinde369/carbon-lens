@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SummaryCards matches snapshot for standard footprint 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="Carbon footprint summary"
+    class="summary-cards"
+    role="region"
+  >
+    <div
+      class="summary-card"
+    >
+      <p
+        class="card-label"
+      >
+        Your Annual Footprint
+      </p>
+      <p
+        class="card-value"
+      >
+        2.80 t CO₂e
+      </p>
+      <p
+        class="card-sub"
+      >
+        ≈ 13,333 trees planted for a year
+      </p>
+    </div>
+    <div
+      class="summary-card"
+    >
+      <p
+        class="card-label"
+      >
+        Daily Average
+      </p>
+      <p
+        class="card-value"
+      >
+        8 kg CO₂e
+      </p>
+      <p
+        class="card-sub"
+      >
+        per day
+      </p>
+    </div>
+    <div
+      class="summary-card"
+    >
+      <p
+        class="card-label"
+      >
+        vs. India Urban Avg
+      </p>
+      <p
+        class="card-value"
+      >
+        127.3%
+      </p>
+      <p
+        class="card-sub"
+      >
+        avg 2.20 t CO₂e/yr
+      </p>
+    </div>
+    <div
+      class="summary-card"
+    >
+      <p
+        class="card-label"
+      >
+        Paris Target Gap
+      </p>
+      <p
+        class="card-value"
+      >
+        +800 kg CO₂e
+      </p>
+      <p
+        class="card-sub"
+      >
+        2°C pathway = 2t/yr
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
