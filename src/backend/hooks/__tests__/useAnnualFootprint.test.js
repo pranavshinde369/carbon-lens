@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react';
 import { useAnnualFootprint } from '../useAnnualFootprint';
-import { BENCHMARKS } from '../../data/constants';
+import { BENCHMARKS } from '../../../backend/data/constants';
 
 describe('useAnnualFootprint', () => {
   it('returns quiz estimate when log is short', () => {
