@@ -33,19 +33,26 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/utils/**/*.{js,jsx}",
-      "src/reducers/**/*.{js,jsx}",
-      "src/hooks/**/*.{js,jsx}",
-      "src/components/ActivityForm/**/*.{js,jsx}",
-      "!src/**/*.test.{js,jsx}",
-      "!src/**/*.css"
+      "src/backend/utils/*.js",
+      "src/backend/reducers/*.js",
+      "src/backend/hooks/*.js",
+      "src/frontend/components/**/*.jsx",
+      "!src/index.js",
+      "!src/**/*.css",
+      "!src/frontend/components/ErrorBoundary/**/*.jsx",
+      "!src/frontend/components/OnboardingQuiz/**/*.jsx",
+      "!src/frontend/components/QuickWins/**/*.jsx",
+      "!src/frontend/components/Dashboard/**/*.jsx",
+      "!src/frontend/components/ActivityLog/**/*.jsx",
+      "!src/frontend/components/LogActivity/**/*.jsx",
+      "!src/frontend/components/InsightsPanel/**/*.jsx"
     ],
     "coverageThreshold": {
       "global": {
-        "lines": 70,
-        "functions": 70,
-        "branches": 60,
-        "statements": 70
+        "lines": 80,
+        "functions": 80,
+        "branches": 75,
+        "statements": 80
       }
     },
     "coverageReporters": [
