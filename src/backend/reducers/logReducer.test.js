@@ -73,3 +73,61 @@ describe("logReducer — CLEAR", () => {
     expect(Array.isArray(result)).toBe(true);
   });
 });
+
+describe("logReducer — UNKNOWN ACTION", () => {
+  test("returns state for unknown action type and warns in development", () => {
+    const originalEnv = process.env.NODE_ENV;
+    process.env.NODE_ENV = "development";
+    const warnMock = jest.spyOn(console, "warn").mockImplementation(() => {});
+
+    const state = [{ id: 1 }];
+    const result = logReducer(state, { type: "UNKNOWN" });
+    expect(result).toBe(state);
+    expect(warnMock).toHaveBeenCalledWith("[logReducer] Unknown action type:", "UNKNOWN");
+
+    warnMock.mockRestore();
+    process.env.NODE_ENV = originalEnv;
+  });
+});
+
+describe("logReducer — crypto fallback", () => {
+  test("falls back to manual ID generation when crypto is undefined", () => {
+    const originalCrypto = global.crypto;
+    Object.defineProperty(global, "crypto", {
+      value: undefined,
+      configurable: true,
+      writable: true,
+    });
+
+    const state = logReducer([], { type: "ADD", payload: { category: "transport", activityKey: "metro_rail", quantity: 100 } });
+    expect(state).toHaveLength(1);
+    expect(typeof state[0].id).toBe("string");
+    expect(state[0].id.length).toBeGreaterThan(5);
+
+    Object.defineProperty(global, "crypto", {
+      value: originalCrypto,
+      configurable: true,
+      writable: true,
+    });
+  });
+
+  test("falls back to manual ID generation when crypto is defined but randomUUID is not", () => {
+    const originalCrypto = global.crypto;
+    Object.defineProperty(global, "crypto", {
+      value: {},
+      configurable: true,
+      writable: true,
+    });
+
+    const state = logReducer([], { type: "ADD", payload: { category: "transport", activityKey: "metro_rail", quantity: 100 } });
+    expect(state).toHaveLength(1);
+    expect(typeof state[0].id).toBe("string");
+    expect(state[0].id.length).toBeGreaterThan(5);
+
+    Object.defineProperty(global, "crypto", {
+      value: originalCrypto,
+      configurable: true,
+      writable: true,
+    });
+  });
+});
