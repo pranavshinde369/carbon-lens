@@ -39,6 +39,19 @@ describe("saveState", () => {
     const huge = "x".repeat(60 * 1024);
     expect(saveState("huge", huge)).toBe(false);
   });
+
+  test("returns false when localStorage.setItem throws an error", () => {
+    const spy = jest.spyOn(Storage.prototype, "setItem").mockImplementation(() => {
+      throw new Error("mock error");
+    });
+    const errorSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+
+    expect(saveState("failKey", "val")).toBe(false);
+    expect(errorSpy).toHaveBeenCalled();
+
+    spy.mockRestore();
+    errorSpy.mockRestore();
+  });
 });
 
 describe("clearState", () => {
@@ -48,5 +61,15 @@ describe("clearState", () => {
     saveState("toClear", "val");
     expect(clearState("toClear")).toBe(true);
     expect(loadState("toClear", "gone")).toBe("gone");
+  });
+
+  test("returns false when localStorage.removeItem throws an error", () => {
+    const spy = jest.spyOn(Storage.prototype, "removeItem").mockImplementation(() => {
+      throw new Error("mock error");
+    });
+
+    expect(clearState("toClear")).toBe(false);
+
+    spy.mockRestore();
   });
 });

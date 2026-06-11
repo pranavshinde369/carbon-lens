@@ -201,3 +201,65 @@ describe("getPersonalisedTips", () => {
     expect(result.length).toBe(1);
   });
 });
+
+// ADDITIONAL TESTS — boundary conditions and integration
+
+describe('calcEmission — additional boundary conditions', () => {
+  test('handles very large quantities without Infinity', () => {
+    const result = calcEmission('transport', 'car_petrol_medium', 1_000_000);
+    expect(isFinite(result)).toBe(true);
+    expect(result).toBe(192000);
+  });
+
+  test('handles decimal quantities correctly', () => {
+    const result = calcEmission('food', 'rice', 0.5);
+    expect(result).toBeCloseTo(1.35, 2);
+  });
+
+  test('rejects negative quantity — returns 0', () => {
+    expect(calcEmission('transport', 'metro_rail', -10)).toBe(0);
+  });
+
+  test('rejects NaN quantity — returns 0', () => {
+    expect(calcEmission('energy', 'electricity', NaN)).toBe(0);
+  });
+});
+
+describe('aggregateEmissions — additional cases', () => {
+  test('handles single entry log', () => {
+    const { total, byCategory } = aggregateEmissions([
+      { category: 'food', activityKey: 'rice', quantity: 10 }
+    ]);
+    expect(total).toBeCloseTo(27, 0);
+    expect(byCategory.food).toBeCloseTo(27, 0);
+  });
+
+  test('does not mutate the input log array', () => {
+    const log = [{ category: 'transport', activityKey: 'bus', quantity: 100 }];
+    const frozen = [...log];
+    aggregateEmissions(log);
+    expect(log).toEqual(frozen);
+  });
+
+  test('all byCategory values sum to total', () => {
+    const log = [
+      { category: 'transport', activityKey: 'metro_rail', quantity: 200 },
+      { category: 'energy',    activityKey: 'electricity', quantity: 100 },
+      { category: 'food',      activityKey: 'chicken',    quantity: 5   },
+    ];
+    const { total, byCategory } = aggregateEmissions(log);
+    const catSum = Object.values(byCategory).reduce((s, v) => s + v, 0);
+    expect(Math.abs(total - catSum)).toBeLessThan(0.01);
+  });
+
+  test('returns numeric total even with mixed valid/invalid entries', () => {
+    const log = [
+      { category: 'transport', activityKey: 'metro_rail', quantity: 100 },
+      { category: 'invalid',   activityKey: 'ghost',      quantity: 50  },
+    ];
+    const { total } = aggregateEmissions(log);
+    expect(typeof total).toBe('number');
+    expect(isNaN(total)).toBe(false);
+  });
+});
+

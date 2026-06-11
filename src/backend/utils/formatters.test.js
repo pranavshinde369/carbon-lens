@@ -36,4 +36,8 @@ describe("toEquivalency", () => {
     expect(result).toMatch(/\d/);
     expect(result.length).toBeGreaterThan(3);
   });
+
+  test("returns empty string for negative input", () => {
+    expect(toEquivalency(-5)).toBe("");
+  });
 });
