@@ -1,4 +1,4 @@
-# 🌿 CarbonLens
+# 🌿 CarbonLens.
 
 > AI-Powered Carbon Footprint Awareness & Reduction Platform
 
